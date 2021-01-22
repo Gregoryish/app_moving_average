@@ -44,7 +44,7 @@ def get_data_ticker(ticker_name, period):
 
     if period != "max":
         days = dict_periods[period]
-        end = datetime.datetime.today()
+        end = datetime.datetime.today()+datetime.timedelta(days=1)
         start = end - datetime.timedelta(days=days)
         end_str = end.strftime("%Y-%m-%d")
         start_str = start.strftime("%Y-%m-%d")
